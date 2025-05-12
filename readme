@@ -1,0 +1,53 @@
+1 
+    # rekursiya — bu funksiyaning ozini ozi chaqirishi . Rekursiya odatda qiyinro muammolani oddiyroq kichik muammolarga ajratish uchun ishlatiladi. Uni bunaqa sluchiylada ishlatish tavsiya qilinadi:
+
+    # 1. muammo ozini ozi takrorlaydigan kichik qismlarga bo'linishi mumkin bo'lsa.
+                    #masalan:
+                        #def f(n): <- buyoqta n berilgan sanaq sfatida
+                        #    if n <= 1:         <- bu yerda 1 ga teng yoki kichik bo'lsa
+                        #        return n
+                        #    else:              <- a bu yerda 1 ga teng yoki kichik bo'lmasa
+                        #        return f(n-1) + f(n-2)
+                        #print(f(10)) <- 55
+
+    # 2. har bir kichik qismni hal qilish uchun bir xil cod qollanilsa.
+                    #masaslan:
+                        #for i in range(99):
+                        #    try:                                   
+                        #        print(2+"l")                       polniy shu taraf kichkina momochalar bor va uni hammasi exept bilan qolanilyapti
+                        #       if 2+ "l" == 4:
+                        #           print("ishondik")
+                        #    except:
+                        #        print("Xatolik")
+
+    # 3. hato uchun toxtash sharti aniq belgilangan bolsa:
+                    # if 0 != 1: <- tekshhiradi
+                    # # break <-toxtatish
+                    # else: <- yoki
+                    # # continue <- qaytaradi
+
+
+    #misol uchun, fibonachiy sonlarini topishda rekursiyadan foydalanish mumkin.
+
+2
+
+# Dekoratorlarning vazifasi:
+
+# 1 Kodning qayta ishlatilishi: Bir xil xatti-harakatni bir nechta funksiyaga qoshish uchun ishlatiladi.
+#  def salam():
+#     print("salom")
+#  def xayr():
+#     print("xayr")
+# return salam()
+# 
+# @salom
+# def orta():
+#    print("orta")  
+
+# resultati bunaqa: salom orta xayr
+
+# 2 Kodning yengil kiberadi : Funksiyalarni ozgartirish uchun qo'shimcha kod yozish orniga dekoratorlardan foydalanish.
+
+# Dekoratorlar @ belgisi yordamida ishlatiladi va funksiya yoki metodning tepasida yoziladi. masalan:
+# @fibonachiy
+#  def f():
